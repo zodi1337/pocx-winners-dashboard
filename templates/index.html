@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitcoin PoCX Block Winners Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body data-range="{{ range_name }}">
+  <main class="page">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">BITCOIN POCX</div>
+        <h1>Bitcoin PoCX Block Winners Dashboard</h1>
+      </div>
+      <div class="update-pill" id="updatePill">Last update: - · Auto refresh: 120 sec</div>
+    </header>
+
+    <div id="congrats" class="congrats hidden"></div>
+
+    <section class="stats">
+      <div class="stat"><span>Total winners</span><strong id="statWinners">-</strong></div>
+      <div class="stat"><span>Chain height</span><strong id="statHeight">-</strong></div>
+      <div class="stat"><span>Network capacity</span><strong id="statNetwork">-</strong></div>
+      <div class="stat"><span>Total rewards</span><strong id="statRewards">-</strong></div>
+    </section>
+
+    <section class="toolbar">
+      <nav class="tabs">
+        <a data-range="24h" href="/?range=24h">24H</a>
+        <a data-range="7d" href="/?range=7d">7D</a>
+        <a data-range="30d" href="/?range=30d">30D</a>
+        <a data-range="all" href="/?range=all">ALL</a>
+      </nav>
+      <button id="refreshBtn" class="button">Refresh now</button>
+    </section>
+
+    <section class="grid-two">
+      <article class="card chart-card">
+        <div class="card-head"><h2>Mined Blocks</h2><strong id="chartRange">-</strong></div>
+        <div class="chart-wrap">
+          <canvas id="donut" width="360" height="360"></canvas>
+          <div class="legend" id="legend"></div>
+        </div>
+      </article>
+
+      <article class="card capacity-card">
+        <div class="card-head"><h2>Estimated Capacity</h2><strong>TB</strong></div>
+        <div id="capacityList" class="capacity-list"></div>
+      </article>
+    </section>
+
+    <section class="card labels-card collapsed" id="labelsCard">
+      <div class="labels-title" id="labelsToggle">
+        <div>
+          <h2>Local Labels</h2>
+          <p>Add optional local names for addresses. Enable “Notify” to show a congratulation banner when a watched address wins a new block.</p>
+        </div>
+        <div class="label-note">stored in this browser <span id="labelsArrow">▾</span></div>
+      </div>
+      <div class="labels-body">
+        <div class="label-form">
+          <input id="labelAddress" placeholder="PoCX address" />
+          <input id="labelName" placeholder="Label name" />
+          <label class="check"><input id="labelNotify" type="checkbox" /> Notify</label>
+          <button id="saveLabel" class="button">Save label</button>
+        </div>
+        <div id="labelRows" class="label-rows"></div>
+      </div>
+    </section>
+
+    <section class="card table-card">
+      <div class="card-head"><h2>Winner addresses</h2><strong id="tableRange">-</strong></div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Address</th><th>Local label</th><th>First block</th><th>Last block</th><th>Total blocks</th><th>Reward</th><th>Window blocks</th><th>Estimated TB</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

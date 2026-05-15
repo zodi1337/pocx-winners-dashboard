@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+pocx-winners.conf
+pocx_winners/
+*.tar.gz
+.DS_Store

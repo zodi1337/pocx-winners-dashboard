@@ -1,0 +1,19 @@
+# PoCX Winners Dashboard configuration
+# Copy this file to pocx-winners.conf and edit the values before installing.
+
+# Base directory for all dashboard files and generated data.
+# Example: /home/<YOUR_USER>/pocx-winners-dashboard
+BASE_DIR="$HOME/pocx-winners-dashboard"
+
+# Full path to your bitcoin-cli binary.
+# Example: /home/<YOUR_USER>/bitcoin-pocx/bitcoin/build/bin/bitcoin-cli
+BITCOIN_CLI="/home/<YOUR_USER>/bitcoin-pocx/bitcoin/build/bin/bitcoin-cli"
+
+# Web interface port.
+WEB_PORT="8082"
+
+# Block reward in BTCX.
+BLOCK_REWARD_BTCX="10"
+
+# Optional service name.
+SERVICE_NAME="pocx-winners-dashboard"
