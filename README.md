@@ -24,7 +24,6 @@ It reads block headers from your local PoCX node through `bitcoin-cli`, stores w
 
 - Fully local and self-hosted
 - Uses your local PoCX node via `bitcoin-cli`
-- No external API required
 - Winner address statistics for 24H, 7D, 30D and ALL
 - Network capacity card
 - Estimated capacity calculation
