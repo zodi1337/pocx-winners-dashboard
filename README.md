@@ -4,6 +4,22 @@ A lightweight self-hosted dashboard for Bitcoin PoCX block winner statistics.
 
 It reads block headers from your local PoCX node through `bitcoin-cli`, stores winner history locally, and serves a clean web dashboard with mined block shares, estimated capacity, local browser labels, and optional block-win notifications for watched addresses.
 
+## Dashboard Overview
+
+![Dashboard Overview](screenshots/dashboard-overview.png)
+
+---
+
+## Local Labels
+
+![Local Labels](screenshots/local-labels.png)
+
+---
+
+## Winner Addresses
+
+![Winner Addresses](screenshots/winner-addresses.png)
+
 ## Features
 
 - Fully local and self-hosted
